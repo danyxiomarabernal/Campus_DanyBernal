@@ -1,0 +1,46 @@
+Algoritmo Calculadora_estadisticas_edades
+	Definir edad, sumaedades,cantidadedades, promedioedades, edadmax Como Entero
+	Definir opcion Como Caracter
+	
+	sumaedades <- 0
+	cantedad <- 0
+	
+	Escribir "Digite su edad (terminar ingrese un numero negativo):"
+	
+	Repetir 
+		Leer edad
+		Si edad >= 0 Entonces
+			sumaedad <- sumaedad + edad
+			cantedad <- cantedad + 1 
+		FinSi
+		
+	Hasta Que edad < 0
+	Si cantedad > 0 Entonces
+		Escribir " Elija la opcion ( 'p' para promedio, 'm' para edad maxima): ";
+		Leer opcio
+	FinSi
+		Si opcio = "p" Entonces
+			promedio <- sumedad/cantedad
+			Escribir " Promedio de las edades que ingreso es: ", promedio
+		SiNo
+			Si opcio = "m" Entonces
+				edadmaxima <- -1
+				Repetir
+					Leer edad
+					Si edad >= 0 Entonces
+						Si edad > edadmaxima Entonces
+							edadmaxima <- edad 
+						FinSi
+					FinSi
+				Hasta Que edad < 0
+				Escribir " Edad maxima: ", edadmaxima
+			SiNo
+				Escribir " No valido "
+			FinSi
+		FinSi
+		SiNo 
+		Escribir " Las edades no son validas "
+	FinSi
+	
+
+FinAlgoritmo
